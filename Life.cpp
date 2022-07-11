@@ -32,7 +32,7 @@ void GlidWorld::show() {
     }
 
     cout << endl;
-    cout << "control + C で終了" << endl;
+    cout << "control + C で終了." << endl;
 }
 
 int GlidWorld::getAdjacentLivesCount(int _x, int _y) {
@@ -49,10 +49,11 @@ int GlidWorld::getAdjacentLivesCount(int _x, int _y) {
 }
 
 void GlidWorld::changeGeneration() {
+    if (cell_a == cell_b) is_exit = true;
     cell_a = cell_b;
 }
 
-void GlidWorld::update() {
+bool GlidWorld::update() {
     for (int x = 0; x < width; x++) {
         for (int y = 0; y < height; y++) {
             int n = getAdjacentLivesCount(x, y);
@@ -72,6 +73,8 @@ void GlidWorld::update() {
         }
     }
     changeGeneration();
+    if (is_exit) return false;
+    return true;
 }
 
 bool GlidWorld::init() {

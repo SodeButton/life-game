@@ -14,6 +14,8 @@ class GlidWorld {
     int width = 24;
     int height = 24;
 
+    bool is_exit = false;
+
     vector<vector<bool>> cell_a;
     vector<vector<bool>> cell_b;
 
@@ -21,7 +23,7 @@ class GlidWorld {
     GlidWorld(int _width, int _height);
     int getAdjacentLivesCount(int _x, int _y);
     void changeGeneration();
-    void update();
+    bool update();
     bool init();
     void show();
 };

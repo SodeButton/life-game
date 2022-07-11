@@ -22,8 +22,12 @@ int main() {
     }
 
     while (true) {
-        world.update();
-        world.show();
+        if (world.update()) {
+            world.show();
+        } else {
+            cout << "終了." << endl;
+            break;
+        }
 
         usleep(200000);
     }
