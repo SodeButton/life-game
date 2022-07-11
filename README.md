@@ -1,4 +1,4 @@
-# 　ビルド
+# ビルド
 
 `$ g++ main.cpp Life.cpp`
 
