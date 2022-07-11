@@ -1,10 +1,14 @@
 # ビルド
 
-`$ g++ main.cpp Life.cpp`
+```
+$ g++ main.cpp Life.cpp
+```
 
 # 実行
 
-`$ ./a.out`
+```
+$ ./a.out
+```
 
 # 使い方
 
