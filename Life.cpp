@@ -32,7 +32,7 @@ void GlidWorld::show() {
     }
 
     cout << endl;
-    cout << "control + C で終了." << endl;
+    cout << "Escキーで終了." << endl;
 }
 
 int GlidWorld::getAdjacentLivesCount(int _x, int _y) {
@@ -73,6 +73,13 @@ bool GlidWorld::update() {
         }
     }
     changeGeneration();
+
+    if (kbhit()) {
+        if (getch() == 0x1b) {
+            is_exit = true;
+        }
+    }
+
     if (is_exit) return false;
     return true;
 }
