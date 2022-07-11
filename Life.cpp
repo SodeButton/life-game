@@ -1,5 +1,5 @@
 //
-// Created by hw21a105 on 2022/07/10.
+// Created by button501 on 2022/07/10.
 //
 
 #include "Life.hpp"
@@ -30,6 +30,9 @@ void GlidWorld::show() {
         }
         cout << endl;
     }
+
+    cout << endl;
+    cout << "control + C で終了" << endl;
 }
 
 int GlidWorld::getAdjacentLivesCount(int _x, int _y) {
@@ -43,6 +46,10 @@ int GlidWorld::getAdjacentLivesCount(int _x, int _y) {
     }
 
     return count;
+}
+
+void GlidWorld::changeGeneration() {
+    cell_a = cell_b;
 }
 
 void GlidWorld::update() {
@@ -64,7 +71,7 @@ void GlidWorld::update() {
             cell_b[x][y] = next;
         }
     }
-    cell_a = cell_b;
+    changeGeneration();
 }
 
 bool GlidWorld::init() {
@@ -81,6 +88,9 @@ bool GlidWorld::init() {
         }
         cout << endl;
     }
+
+    cout << endl;
+    cout << "WASDでカーソルを移動. Spaceキーでセルの生死を選択. Enterキーでシュミレーション開始." << endl;
 
     switch (getch()) {
         case 'w':
@@ -101,6 +111,5 @@ bool GlidWorld::init() {
         case '\n':
             return true;
     }
-
     return false;
 }

@@ -1,5 +1,5 @@
 //
-// Created by hw21a105 on 2022/07/10.
+// Created by button501 on 2022/07/10.
 //
 
 #ifndef LIFEGAME_LIFE_HPP
@@ -20,6 +20,7 @@ class GlidWorld {
    public:
     GlidWorld(int _width, int _height);
     int getAdjacentLivesCount(int _x, int _y);
+    void changeGeneration();
     void update();
     bool init();
     void show();

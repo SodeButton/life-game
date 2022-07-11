@@ -1,5 +1,5 @@
 //
-// Created by hw21a105 on 2022/07/10.
+// Created by button501 on 2022/07/10.
 //
 // WASDでカーソル（⭕️）を移動。スペースキーでセルを生成。もう一度押すと削除。
 // 初期値を入力して、Enterキーでシュミレーション開始。
@@ -25,7 +25,7 @@ int main() {
         world.update();
         world.show();
 
-        usleep(100000);
+        usleep(200000);
     }
 
     return 0;
