@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <div class="canvas">
+            <canvas id="canvas" width="480" height="480">
+            </canvas>
+        </div>
+        <div class="option-field">
+            <div id="size-option">
+                <div>
+                    <label for="width">width</label>
+                    <input id="width" type="number" value="30">
+                </div>
+                <div>
+                    <label for="height">height</label>
+                    <input id="height" type="number" value="30">
+                </div>
+            </div>
+            <div>
+                <button id="play" onclick="play()">PLAY</button>
+                <button id="STOP" onclick="stop()">STOP</button>
+                <button id="STOP" onclick="step()">STEP</button>
+            </div>
+            <div>
+                <label for="time-slider">speed</label>
+                <input type="range" id="time-slider" min="10" max="1000" value="500">
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

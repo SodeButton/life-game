@@ -1,0 +1,17 @@
+.main {
+    display: flex;
+}
+
+.option-field>div {
+    margin: 1em;
+}
+
+canvas {
+    border: solid;
+}
+
+@media screen and (max-width: 730px) {
+    .main {
+        display: block;
+    }
+}
